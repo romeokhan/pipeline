@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage ( 'checkout') {
-      steps {
-   checkout scm
-      }
-   }
    stage ('compile stage') {
    steps {
    withMaven(maven  : 'maven-3.6.3') {
